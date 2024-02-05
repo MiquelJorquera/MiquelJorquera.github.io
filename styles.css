@@ -52,6 +52,10 @@ h3 {
     font: small-caps 1.3rem Antique;
 }
 
+hr {
+    color: var(--color);
+}
+
 .ornament {
     font: 4rem Ornaments;
     margin: -3rem 0 -4rem 0;
