@@ -1,0 +1,114 @@
+@font-face {
+    font-family: 'Antique';
+    src: url('RomanAntique.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Ornaments';
+    src: url('MortisedOrnaments.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'CoverFont';
+    src: url('antique_book_cover.otf') format('opentype');
+}
+
+:root {
+    font: calc(12px + 1.5vw) Antique;
+    --color: black;
+    color: var(--color);
+    background-color: Bisque;
+    text-align: center;
+}
+
+html {
+}
+
+section {
+    margin: 5%;
+    padding: 5%;
+    border: 1px solid var(--color);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: flex-start;
+}
+
+iframe {
+    border:none;
+    width: 100%;
+    height: 40vh;
+    margin: auto;
+}
+
+h1 {
+    font: small-caps 2rem CoverFont;
+}
+
+h2 {
+    font: small-caps 2rem Antique;
+}
+
+h3 {
+    font: small-caps 1.3rem Antique;
+}
+
+.ornament {
+    font: 4rem Ornaments;
+    margin: -3rem 0 -4rem 0;
+}
+
+ol {
+}
+
+li {
+    border-bottom: 2px dotted var(--color);
+    text-align: right;
+    margin: 1rem 0;
+    width: 35vw
+}
+
+a {
+    color: var(--color);
+    line-height: 1em;
+    font-weight: normal;
+}
+
+.contents-item {
+    text-decoration: none;
+}
+
+.cover {
+    margin-bottom: -1rem;
+}
+.cover:before {
+    font: 4rem Ornaments;
+    content: "H";
+}
+.cover:after {
+    font: 4rem Ornaments;
+    content: "E";
+}
+
+.projects-title {
+    margin-bottom: -1rem;
+}
+.projects-title:before {
+    font: 3rem Ornaments;
+    content: "P";
+}
+.projects-title:after {
+    font: 3rem Ornaments;
+    content: "Q";
+}
+
+.small {
+    font-size: 1rem;
+}
+.small:before {
+    content: "— ";
+    font: lighter 1rem Arial
+}
+.small:after {
+    content: " —";
+    font: lighter 1rem Arial
+}

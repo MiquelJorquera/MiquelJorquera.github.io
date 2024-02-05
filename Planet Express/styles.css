@@ -1,0 +1,248 @@
+@font-face {
+  font-family: 'FuturamaFont';
+  src: url('https://rawcdn.githack.com/PatoLubricado/fccfiles/main/fr-bold.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Alienese';
+  src: url(fr-fal1.ttf) format('truetype');
+}
+
+:root {
+  --ElectricMucus: #66c88f;
+  --EMDark: #4cb16f;
+  --Red: #ca0b1b;
+  --RedDark: #aa0000;
+  --NavHeight: calc(60px + 6vh);
+  --Corners: 10px;
+  --CornersSmall: 3px;
+  --Fonts: 'Arvo', sans-serif;
+  --FontSize: calc(8px + 2vh);
+  --Width: 75vw;
+  --Border: 3px solid darkgreen;
+}
+
+
+html {
+  height: 100%;
+  width: 100%;
+  font-family: var(--Fonts);
+  background-color: var(--ElectricMucus);
+  color: var(--RedDark);
+  font-size: var(--FontSize);
+}
+
+body {
+  margin: 0;
+  padding-top: calc(var(--NavHeight)*1.25);
+}
+
+h1 {
+  width: 100%;
+  margin: 2em auto;
+  text-align: center;
+}
+
+p {
+  margin: 2em auto;
+  width: var(--Width);
+  max-width: 100vh
+}
+
+img {
+    display: block;
+    object-fit: cover;
+  margin: 2em auto;
+  --max-height: 75vh;
+    width: var(--Width);
+    height: min(var(--max-height), calc(var(--Width) * 3/4));
+    max-width: min(var(--Width), calc(var(--max-height) * 4/3));
+    }
+
+#slogan {
+  margin: 5vh auto;
+  font-size: calc(2 * var(--FontSize));
+  font-weight: bold;
+  font-style: italic;
+  text-align: center;
+  font-family: 'Parisienne', serif;
+}
+
+#video {
+  margin: auto;
+  display: block;
+  aspect-ratio: 4 / 3;
+  width: var(--Width);
+  --max-height: 75vh;
+  max-width: calc(var(--max-height) * 4/3);
+}
+
+nav {
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  height: auto;
+  padding: .75em;
+  background-color: var(--EMDark);
+  border-bottom: var(--Border);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+#header-img {
+  height: var(--NavHeight);
+  width: auto;
+  margin: auto;
+}
+
+a {
+  color: var(--Red);
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  font-weight: bold;
+  text-decoration: none;
+  margin: 8px;
+  padding: .5em;
+  width: 4em;
+  min-width: 3.5em;
+  height: 75%;
+  background-color: var(--ElectricMucus);
+  border-radius: var(--Corners);
+  border: var(--Border);
+}
+
+#lang {
+  margin: auto 3em auto auto;
+  background-color: var(--ElectricMucus);
+}
+
+
+
+form {
+  width: 80vw;
+  min-width: 300px;
+  margin: 0 auto;
+  padding-bottom: 2em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+fieldset {
+  padding: 0 2rem 2rem 2rem;
+  margin-bottom: 5vh;
+  border: 3px solid var(--EMDark);
+  border-radius: var(--Corners);
+  min-width: 18em;
+  max-width: 80vh;
+}
+#deltype {
+  min-width: 8em;
+}
+#sendto {
+  min-width: 18em;
+}
+#parcelinfo {
+  min-width: 10em;
+}
+#persinfo {
+  min-width: 18em;
+}
+
+legend {
+  padding: 0 1em;
+  margin-bottom: 2em;
+  font-weight: bold;
+}
+
+label {
+  display: block;
+  margin: 0em 0;
+}
+
+input, select {
+  margin: 10px 0 0 0;
+  padding: .2em;
+  background-color: var(--EMDark);
+  border: 0;
+  color: var(--Red);
+  border-radius: var(--CornersSmall);
+  font-family: var(--Fonts);
+  font-size: var(--FontSize);
+}
+input::placeholder {
+  color: darkgreen;
+}
+input[type="submit"] {
+  display: block;
+  width: 60%;
+  margin: 1em auto;
+  height: 2em;
+  font-size: 1.1em;
+  background-color: var(--EMDark);
+  border-radius: var(--Corners);
+  border: var(--Border);
+}
+
+.title {
+  margin: 2em 0 1em 1em;
+  font-size: 1.2em;
+}
+.title:first-of-type {
+  margin: 0 1em 
+}
+
+.textinput {
+  display: block;
+  margin: 10px auto;
+  min-width: 17em;
+  border: 0;
+  padding: .2em;
+}
+
+.inline {
+  width: 3.5em;
+  margin: 0 0.5em 0 0;
+  vertical-align: middle;
+}
+
+.inline, #selected-text {
+ display: inline
+}
+
+blockquote {
+  width: calc(var(--Width) - 6em);
+  max-width: calc(100vh - 6em);
+  font-size: 0.8em;
+  padding: 3em;
+  margin: 1em auto;
+  border-left: 4px solid var(--EMDark);
+  }
+
+address {
+  padding: 2em;
+  margin-top: 3em;
+  background-color: var(--EMDark);
+  border-top: var(--Border);
+}
+
+::selection {
+  color: var(--EMDark);
+  background: var(--Red);
+}
+
+@media screen and (max-width:46em) {
+  nav{
+    padding: 0.2em
+  }
+  .nav-link {
+    min-width: 3.5em;
+    margin: 0.1em;
+  }
+}
