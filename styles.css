@@ -14,8 +14,9 @@
 :root {
     font: calc(12px + 1.5vw) Antique;
     --color: black;
+    --bgColor: Bisque;
     color: var(--color);
-    background-color: Bisque;
+    background-color: var(--bgColor);
     text-align: center;
 }
 
@@ -116,3 +117,17 @@ a {
     content: " —";
     font: lighter 1rem Arial
 }
+
+
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: darken(var(--bgColor), 50%);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
