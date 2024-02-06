@@ -8,15 +8,14 @@
 }
 
 :root {
-  --ElectricMucus: #66c88f;
+  --electricMucus: #66c88f;
   --EMDark: #4cb16f;
   --Red: #ca0b1b;
   --RedDark: #aa0000;
   --NavHeight: calc(60px + 6vh);
   --Corners: 10px;
   --CornersSmall: 3px;
-  --Fonts: 'Arvo', sans-serif;
-  --FontSize: calc(8px + 2vh);
+  --font: calc(12px + 1.5vh) 'Arvo', sans-serif;
   --Width: 75vw;
   --Border: 3px solid darkgreen;
 }
@@ -25,10 +24,9 @@
 html {
   height: 100%;
   width: 100%;
-  font-family: var(--Fonts);
-  background-color: var(--ElectricMucus);
+  font: var(--font);
+  background-color: var(--electricMucus);
   color: var(--RedDark);
-  font-size: var(--FontSize);
 }
 
 body {
@@ -60,11 +58,8 @@ img {
 
 #slogan {
   margin: 5vh auto;
-  font-size: calc(2 * var(--FontSize));
-  font-weight: bold;
-  font-style: italic;
+  font: bold italic 2rem 'Parisienne', serif;
   text-align: center;
-  font-family: 'Parisienne', serif;
 }
 
 #video {
@@ -108,18 +103,17 @@ a {
   font-weight: bold;
   text-decoration: none;
   margin: 8px;
-  padding: .5em;
-  width: 4em;
-  min-width: 3.5em;
+  padding: .5rem;
+  width: 4rem;
   height: 75%;
-  background-color: var(--ElectricMucus);
+  background-color: var(--electricMucus);
   border-radius: var(--Corners);
   border: var(--Border);
 }
 
 #lang {
-  margin: auto 3em auto auto;
-  background-color: var(--ElectricMucus);
+  margin: auto 3rem auto auto;
+  background-color: var(--electricMucus);
 }
 
 
@@ -173,8 +167,7 @@ input, select {
   border: 0;
   color: var(--Red);
   border-radius: var(--CornersSmall);
-  font-family: var(--Fonts);
-  font-size: var(--FontSize);
+  font: var(--font);
 }
 input::placeholder {
   color: darkgreen;
@@ -184,18 +177,18 @@ input[type="submit"] {
   width: 60%;
   margin: 1em auto;
   height: 2em;
-  font-size: 1.1em;
+  font-size: 1.1rem;
   background-color: var(--EMDark);
   border-radius: var(--Corners);
   border: var(--Border);
 }
 
 .title {
-  margin: 2em 0 1em 1em;
-  font-size: 1.2em;
+  margin: 2rem 0 1rem 1rem;
+  font-size: 1.2rem;
 }
 .title:first-of-type {
-  margin: 0 1em 
+  margin: 0 1rem 
 }
 
 .textinput {
@@ -207,8 +200,8 @@ input[type="submit"] {
 }
 
 .inline {
-  width: 3.5em;
-  margin: 0 0.5em 0 0;
+  width: 3.5rem;
+  margin: 0 0.5rem 0 0;
   vertical-align: middle;
 }
 
@@ -226,8 +219,8 @@ blockquote {
   }
 
 address {
-  padding: 2em;
-  margin-top: 3em;
+  padding: 2rem;
+  margin-top: 3rem;
   background-color: var(--EMDark);
   border-top: var(--Border);
 }
@@ -239,10 +232,10 @@ address {
 
 @media screen and (max-width:46em) {
   nav{
-    padding: 0.2em
+    padding: 0.2rem
   }
   .nav-link {
-    min-width: 3.5em;
-    margin: 0.1em;
+    min-width: 3.5rem;
+    margin: 0.1rem;
   }
 }
