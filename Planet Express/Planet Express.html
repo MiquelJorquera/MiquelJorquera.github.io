@@ -1,154 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <title>Product Landing Page</title>
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Parisienne:wght@400;700&display=swap" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&display=swap" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Linefont:wght@400;700&display=swap" />
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <title>Product Landing Page</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Parisienne:wght@400;700&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Linefont:wght@400;700&display=swap" />
+</head>
 
 
-  <body>
-    <header id='header'>
-      <nav id='nav-bar'>
-        <a href="#Home" onclick="return show('Home','Send','Zoidberg','Bender');">
+<body>
+  <header id='header'>
+    <nav id='nav-bar'>
+      <a href="#Home" onclick="return show('Home','Send','Zoidberg','Bender');">
         <img width=100 id='header-img' src='https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.heromachine.com%2Fwp-content%2Fuploads%2F2016%2F10%2Fplanet_express_logo_by_pencilshade-d6ob7af.png&f=1&nofb=1&ipt=fd8e17f0cd6b1a01acdd952c19e013e84393fade6a3e9e47dec3160d5ce81008&ipo=images'>
-        </a>
-        <a class='nav-link' href="#Send" onclick="show('Send','Home','Zoidberg','Bender'); scrolltop()">Send a parcel</a>
-        <a class='nav-link' href="#Zoidberg" onclick="return show('Zoidberg','Send','Home','Bender');">Medical services</a>
-        <a class='nav-link' href="#Bender" onclick="return show('Bender','Zoidberg','Send','Home');">Bending services</a>
-        <select id="lang" onchange="changeFont()">
-              <option value="var(--Fonts)" style="font-family: var(--Fonts);">English</option>
-              <option value="Alienese" style="font-family: Alienese;">Alienese</option>
-            </select>
-      </nav>
-      </header>
+      </a>
+      <a class='nav-link' href="#Send" onclick="show('Send','Home','Zoidberg','Bender'); scrolltop()">Send a parcel</a>
+      <a class='nav-link' href="#Zoidberg" onclick="return show('Zoidberg','Send','Home','Bender');">Medical services</a>
+      <a class='nav-link' href="#Bender" onclick="return show('Bender','Zoidberg','Send','Home');">Bending services</a>
+      <select id="lang" onchange="changeFont()">
+        <option value="var(--Fonts)" style="font-family: var(--Fonts);">English</option>
+        <option value="Alienese" style="font-family: Alienese;">Alienese</option>
+      </select>
+    </nav>
+  </header>
+  
+
+  <div id='Home'>
+    <p id='slogan'>Our crew is replaceable.<br>Your package isn't.</p>
+
+    <iframe id='video' src="https://www.youtube.com/embed/AybkHn-lpbI?t=3?rel=0" frameborder='0' allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  </div>
+
+  <div id='Send' style='display:none'>
+    <form id='form' action="https://futurama.fandom.com/wiki/Planet_Express?so=search">
+    <h1 class='header'>Send a parcel</h1>
+    <fieldset id='deltype'>
+      <legend>Delivery type</legend>
+      <label><input id='regular' type='radio' name='delivery-type' value='regular' checked> Regular</label>
+      <label><input id='extra-regular' type='radio' name='delivery-type' value='extra-regular'> Extra Regular</label>
+      <label><input id='extra-regular' type='radio' name='delivery-type' value='extra-regular'> Maxi-Regular</label>
+    </fieldset>
+
+    <fieldset id='sendto'>
+      <legend>Where will you send your parcel?</legend>
+      <input id ='postcode' name='postcode' class='textinput' placeholder="Postcode" required>
+      <input id ='country' name='country' class='textinput' placeholder="Country" required>
+      <input id ='planet' name='planet' class='textinput' placeholder="Planet" required>
+      <input id ='universe' name='universe' class='textinput' placeholder="Universe" required>
+    </fieldset>
+
+    <fieldset id='parcelinfo'>
+      <legend>Parcel information</legend>
+      <div class='title'>Mass</div>
+      <input type="number" id="mass" class='inline' min="0" step="0.01" value='6.28'>
+      <label id="selected-text">kilograms</label>
+      <select id="unit" onchange="update(this)">
+        <option value="micrograms">μg</option>
+        <option value="milligrams">mg</option>
+        <option value="grams">g</option>
+        <option value="kilograms" selected>kg</option>
+        <option value="megagrams">Mg</option>
+        <option value="solar masses">M☉</option>
+      </select>
+
+      <div class='title'>Matter type(s)</div>
+        <label for="regular">
+        <input id="regular" type="checkbox" name="mtype" value="regular" checked> Regular</label>
+        <label for="anti">
+        <input id="anti" type="checkbox" name="mtype" value="anti"> Anti</label>
+        <label for="dark">
+        <input id="dark" type="checkbox" name="mtype" value="dark"> Dark</label>
+        <label for="degenerate">
+        <input id="degenerate" type="checkbox" name="mtype" value="degenerate"> Degenerate</label>
+        <label for="smelly">
+        <input id="smelly" type="checkbox" name="mtype" value="smelly"> Smelly</label>
+      
+        <div class='title'>Insurance</div>
+        <select id="insurance">
+          <option value="none">None</option>
+        </select>
+    </fieldset>
+
+
+    <fieldset id='persinfo'>
+      <legend>Your contact details</legend>         
+      <input id ='email' type='email' name="email" class='textinput' placeholder="Your electronic-mail address" required>
+      <input id ='address' name="address" class='textinput' placeholder="Your non-electronic-mail address" required>
+      <input id ='genome' name="genome" class='textinput' placeholder="Your genome" required>
     
+      <label for="tc">
+      <input id="tc" type="checkbox" name="tc" value="tc" checked required> I agree to abide by the Planet Express Inc.  Terms and Conditions,  and to not seek refunds or legal actions regardless of any loss of property,  life,  limb(s),  sanity,  or soul occurring as a direct consequence of this delivery,  or lack thereof.</label>
+    
+      <input id='submit' type="submit" value='Get price'>
+    </fieldset>
+    </form>
+  </div>
 
-    <div id='Home'>
-      <p id='slogan'>Our crew is replaceable.<br>Your package isn't.</p>
+  <div id='Zoidberg' style='display:none'>
+    <h1 class='header'>Medical services</h1>
+    <p>At Planet Express we don't only deliver packages faster than light.  We also rearrange your organs in new and creative ways while you enjoy a cold,  slimy <a href='https://www.slurm.com'>Slurm™</a> in our waiting room!  Our internal medicine physician John A. Zoidberg,  "M"D,  will take care of any desires of the flesh for the low,  low price of <b><i>$14.99!</i></b><br>
+    In his own words:</p>
+    <blockquote>
+      Ah yes!  Dr.  Zoidberg can polish your kidneys,  transplant your gizzards,  declare you dead,  give you some more eyeballs,  you can pick from the pile.  Anything you want,  I can try.  I'm an expert in humans,  but even if you have bones or a skeleton I can probably figure it out.
+    </blockquote><img width=100 id='zoidberg-img' src='https://infosnacks.com/img/2011/doctor-zoidberg.jpg'>
+  </div>
 
-      <iframe id='video' src="https://www.youtube.com/embed/AybkHn-lpbI?t=3?rel=0" frameborder='0' allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-    </div>
+  <div id='Bender' style='display:none'>
+    <h1 class='header'>Bending services</h1>
+    <p>Let's make one thing very clear, meatbag:  You give me money and some stuff to bend, and if I feel like it,  <i>maybe</i> I'll consider bending it.  If you don't bring enough dough,  I'll bend your spine.  I can bend anything! I once bent an unbendable girder, easy,  just like that, 'cause I felt like it.  I'm Bender,  baby!</p>
+    <img width="400" height="300" src='https://c.tenor.com/z34okGD0ZMoAAAAC/futurama-bender.gif'>
+  </div>
 
-    <div id='Send' style='display:none'>
-          <form id='form' action="https://futurama.fandom.com/wiki/Planet_Express?so=search">
-          <h1 class='header'>Send a parcel</h1>
-          <fieldset id='deltype'>
-            <legend>Delivery type</legend>
-            <label><input id='regular' type='radio' name='delivery-type' value='regular' checked> Regular</label>
-            <label><input id='extra-regular' type='radio' name='delivery-type' value='extra-regular'> Extra Regular</label>
-            <label><input id='extra-regular' type='radio' name='delivery-type' value='extra-regular'> Maxi-Regular</label>
-          </fieldset>
-
-          <fieldset id='sendto'>
-            <legend>Where will you send your parcel?</legend>
-            <input id ='postcode' name='postcode' class='textinput' placeholder="Postcode" required>
-            <input id ='country' name='country' class='textinput' placeholder="Country" required>
-            <input id ='planet' name='planet' class='textinput' placeholder="Planet" required>
-            <input id ='universe' name='universe' class='textinput' placeholder="Universe" required>
-          </fieldset>
-
-          <fieldset id='parcelinfo'>
-            <legend>Parcel information</legend>
-            <div class='title'>Mass</div>
-            <input type="number" id="mass" class='inline' min="0" step="0.01" value='6.28'>
-            <label id="selected-text">kilograms</label>
-            <select id="unit" onchange="update(this)">
-              <option value="micrograms">μg</option>
-              <option value="milligrams">mg</option>
-              <option value="grams">g</option>
-              <option value="kilograms" selected>kg</option>
-              <option value="megagrams">Mg</option>
-              <option value="solar masses">M☉</option>
-            </select>
-
-            <div class='title'>Matter type(s)</div>
-            <label for="regular">
-             <input id="regular" type="checkbox" name="mtype" value="regular" checked> Regular</label>
-            <label for="anti">
-             <input id="anti" type="checkbox" name="mtype" value="anti"> Anti</label>
-            <label for="dark">
-             <input id="dark" type="checkbox" name="mtype" value="dark"> Dark</label>
-            <label for="degenerate">
-             <input id="degenerate" type="checkbox" name="mtype" value="degenerate"> Degenerate</label>
-            <label for="smelly"><input id="smelly" type="checkbox" name="mtype" value="smelly"> Smelly</label>
-            
-            <div class='title'>Insurance</div>
-            <select id="insurance">
-              <option value="none">None</option>
-            </select>
-          </fieldset>
-
- 
-          <fieldset id='persinfo'>
-            <legend>Your contact details</legend>         
-          <input id ='email' type='email' name="email" class='textinput' placeholder="Your electronic-mail address" required>
-          <input id ='address' name="address" class='textinput' placeholder="Your non-electronic-mail address" required>
-          <input id ='genome' name="genome" class='textinput' placeholder="Your genome" required>
-          
-          <label for="tc">
-            <input id="tc" type="checkbox" name="tc" value="tc" checked required> I agree to abide by the Planet Express Inc.  Terms and Conditions,  and to not seek refunds or legal actions regardless of any loss of property,  life,  limb(s),  sanity,  or soul occurring as a direct consequence of this delivery,  or lack thereof.</label>
-          
-          <input id='submit' type="submit" value='Get price'>
-          </fieldset>
-        </form>
-    </div>
-
-    <div id='Zoidberg' style='display:none'>
-      <h1 class='header'>Medical services</h1>
-      <p>At Planet Express we don't only deliver packages faster than light.  We also rearrange your organs in new and creative ways while you enjoy a cold,  slimy <a href='https://www.slurm.com'>Slurm™</a> in our waiting room!  Our internal medicine physician John A. Zoidberg,  "M"D,  will take care of any desires of the flesh for the low,  low price of <b><i>$14.99!</i></b><br>
-      In his own words:</p>
-      <blockquote>
-        Ah yes!  Dr.  Zoidberg can polish your kidneys,  transplant your gizzards,  declare you dead,  give you some more eyeballs,  you can pick from the pile.  Anything you want,  I can try.  I'm an expert in humans,  but even if you have bones or a skeleton I can probably figure it out.
-      </blockquote><img width=100 id='zoidberg-img' src='https://infosnacks.com/img/2011/doctor-zoidberg.jpg'>
-    </div>
-
-    <div id='Bender' style='display:none'>
-      <h1 class='header'>Bending services</h1>
-      <p>Let's make one thing very clear, meatbag:  You give me money and some stuff to bend, and if I feel like it,  <i>maybe</i> I'll consider bending it.  If you don't bring enough dough,  I'll bend your spine.  I can bend anything! I once bent an unbendable girder, easy,  just like that, 'cause I felt like it.  I'm Bender,  baby!</p>
-      <img width="400" height="300" src='https://c.tenor.com/z34okGD0ZMoAAAAC/futurama-bender.gif'>
-    </div>
-  
   <address>
-Planet Express HQ<br>
-West 57th Street<br>
-Manhattan<br>
-New New York<br>
-United States<br>
-Earth<br>
-Sol System<br>
-Milky Way<br>
-Universe A
-</address>
-  </body>
+    Planet Express HQ<br>
+    West 57th Street<br>
+    Manhattan<br>
+    New New York<br>
+    United States<br>
+    Earth<br>
+    Sol System<br>
+    Milky Way<br>
+    Universe A
+  </address>
+</body>
   
 
-<script>
-  function update(selectElement) {
-    var selectedText = selectElement.options[selectElement.selectedIndex].value;
-    document.getElementById('selected-text').innerText = selectedText;}
-  
-  function show(shown, hidden1, hidden2, hidden3) {
-  document.getElementById(shown).style.display='block';
-  document.getElementById(hidden1).style.display='none';
-  document.getElementById(hidden2).style.display='none';
-  document.getElementById(hidden3).style.display='none';
-  
-  }
-  function scrolltop() {window.scrollTo(0, 0);}
-  function changeFont() {
-            var selectedFont = document.getElementById('lang').value;
-            document.querySelectorAll('html, input, select').forEach(function (element) {
-                element.style.fontFamily = selectedFont;
-            });
-        }
-  function updatePaddingTop() {
-    document.body.style.paddingTop = 1.1 * document.getElementById('nav-bar').clientHeight + 'px';}
-        updatePaddingTop();
-        window.addEventListener('resize', updatePaddingTop);
-
-</script>
+<script src="./script.js"></script>
 </html>
