@@ -15,7 +15,8 @@
   --NavHeight: calc(60px + 6vh);
   --Corners: 10px;
   --CornersSmall: 3px;
-  --font: calc(12px + 1.5vh) 'Arvo', sans-serif;
+  --fontFamily: 'Arvo', sans-serif;
+  --font: calc(12px + 1.5vh) var(--fontFamily);
   --Width: 75vw;
   --Border: 3px solid darkgreen;
 }
@@ -104,7 +105,7 @@ a {
   text-decoration: none;
   margin: 8px;
   padding: .5rem;
-  width: 4rem;
+  width: 4.5rem;
   height: 75%;
   background-color: var(--electricMucus);
   border-radius: var(--Corners);
