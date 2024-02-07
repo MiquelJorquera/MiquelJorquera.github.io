@@ -3,15 +3,14 @@ function update(selectElement) {
   document.getElementById('selected-text').innerText = selectedText;
 }
 
-function show(shown, hidden1, hidden2, hidden3) {
+function show(shown) {
+document.querySelectorAll('.page').style.display='none';
 document.getElementById(shown).style.display='block';
-document.getElementById(hidden1).style.display='none';
-document.getElementById(hidden2).style.display='none';
-document.getElementById(hidden3).style.display='none';
 scrolltop();
 }
 
 function scrolltop() {window.scrollTo(0, 0);}
+
 function updatePaddingTop() {
   document.body.style.paddingTop = 1.1 * document.getElementById('nav-bar').clientHeight + 'px';
 }
