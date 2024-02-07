@@ -13,12 +13,12 @@
   --Red: #ca0b1b;
   --RedDark: #aa0000;
   --NavHeight: calc(60px + 6vh);
-  --Corners: 10px;
-  --CornersSmall: 3px;
+  --corners: 10px;
+  --cornersSmall: 3px;
   --fontFamily: 'Arvo', sans-serif;
   --font: calc(12px + 1.5vh) var(--fontFamily);
   --Width: 75vw;
-  --Border: 3px solid darkgreen;
+  --border: 3px solid darkgreen;
 }
 
 
@@ -79,7 +79,7 @@ nav {
   height: auto;
   padding: .75em;
   background-color: var(--EMDark);
-  border-bottom: var(--Border);
+  border-bottom: var(--border);
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
@@ -108,8 +108,8 @@ a {
   width: 4.5rem;
   height: 75%;
   background-color: var(--electricMucus);
-  border-radius: var(--Corners);
-  border: var(--Border);
+  border-radius: var(--corners);
+  border: var(--border);
 }
 
 #lang {
@@ -133,7 +133,7 @@ fieldset {
   padding: 0 2rem 2rem 2rem;
   margin-bottom: 5vh;
   border: 3px solid var(--EMDark);
-  border-radius: var(--Corners);
+  border-radius: var(--corners);
   min-width: 18em;
   max-width: 80vh;
 }
@@ -167,7 +167,7 @@ input, select {
   background-color: var(--EMDark);
   border: 0;
   color: var(--Red);
-  border-radius: var(--CornersSmall);
+  border-radius: var(--cornersSmall);
   font: var(--font);
 }
 input::placeholder {
@@ -180,8 +180,8 @@ input[type="submit"] {
   height: 2em;
   font-size: 1.1rem;
   background-color: var(--EMDark);
-  border-radius: var(--Corners);
-  border: var(--Border);
+  border-radius: var(--corners);
+  border: var(--border);
 }
 
 .title {
@@ -223,7 +223,7 @@ address {
   padding: 2rem;
   margin-top: 3rem;
   background-color: var(--EMDark);
-  border-top: var(--Border);
+  border-top: var(--border);
 }
 
 ::selection {
@@ -239,4 +239,19 @@ address {
     min-width: 3.5rem;
     margin: 0.1rem;
   }
+}
+
+
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 3px darkgreen; 
+  background: var(--EMDark);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--EMDark);
+  border: var(--border);
+  border-radius: var(--corners)
 }
