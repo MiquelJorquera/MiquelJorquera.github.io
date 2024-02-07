@@ -82,14 +82,14 @@ nav {
   border-bottom: var(--border);
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
   align-items: center;
+  justify-content: flex-start;
 }
 
 #header-img {
   height: var(--NavHeight);
   width: auto;
-  margin: auto;
+  margin: 0 .3rem;
 }
 
 a {
@@ -99,7 +99,7 @@ a {
 .nav-link {
   font: var(--font);
   font-weight: bold;
-  margin: auto;
+  margin: .3rem;
   padding: auto;
   width: 5rem;
   height: 3.5rem;
@@ -112,7 +112,6 @@ a {
 #lang {
   margin: auto 3rem auto auto;
   background-color: var(--electricMucus);
-  align-self: felx-end;
 }
 
 form {
