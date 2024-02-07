@@ -64,9 +64,6 @@ hr {
     margin: -3rem 0 -4rem 0;
 }
 
-ol {
-}
-
 li {
     border-bottom: 2px dotted var(--color);
     text-align: right;
