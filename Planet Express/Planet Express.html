@@ -13,12 +13,10 @@
 <body>
   <header id='header'>
     <nav id='nav-bar'>
-      <a href="#Home" onclick="show('Home');">
-        <img width=100 id='header-img' src='https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.heromachine.com%2Fwp-content%2Fuploads%2F2016%2F10%2Fplanet_express_logo_by_pencilshade-d6ob7af.png&f=1&nofb=1&ipt=fd8e17f0cd6b1a01acdd952c19e013e84393fade6a3e9e47dec3160d5ce81008&ipo=images'>
-      </a>
-      <a class='nav-link' href="#Send" onclick="show('Send');">Send a parcel</a>
-      <a class='nav-link' href="#Zoidberg" onclick="show('Zoidberg');">Medical services</a>
-      <a class='nav-link' href="#Bender" onclick="show('Bender');">Bending services</a>
+      <img width=100 id='header-img' onclick="show('Home')"; src='https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.heromachine.com%2Fwp-content%2Fuploads%2F2016%2F10%2Fplanet_express_logo_by_pencilshade-d6ob7af.png&f=1&nofb=1&ipt=fd8e17f0cd6b1a01acdd952c19e013e84393fade6a3e9e47dec3160d5ce81008&ipo=images'>
+      <button class='nav-link' onclick="show('Send');">Send a parcel</button>
+      <button class='nav-link' onclick="show('Zoidberg');">Medical services</button>
+      <button class='nav-link' onclick="show('Bender');">Bending services</button>
       <select id="lang" onchange="changeFont()">
         <option value="var(--fontFamily)" style="font-family: var(--fontFamily);">English</option>
         <option value="Alienese" style="font-family: Alienese;">Alienese</option>
@@ -28,7 +26,7 @@
   
   
 
-  <div class="page" id='Home'>
+  <div class="page" id='Home' style='display:block'>
     <p id='slogan'>Our crew is replaceable.<br>Your package isn't.</p>
 
     <iframe id='video' src="https://www.youtube.com/embed/AybkHn-lpbI?t=3?rel=0" frameborder='0' allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>

@@ -4,12 +4,12 @@ function update(selectElement) {
 }
 
 function show(shown) {
-document.querySelectorAll('.page').style.display='none';
+document.querySelectorAll('.page').forEach((el)=> el.style.display='none');
 document.getElementById(shown).style.display='block';
-scrolltop();
+scrollTop();
 }
 
-function scrolltop() {window.scrollTo(0, 0);}
+function scrollTop() {window.scrollTo(0, 0);}
 
 function updatePaddingTop() {
   document.body.style.paddingTop = 1.1 * document.getElementById('nav-bar').clientHeight + 'px';
