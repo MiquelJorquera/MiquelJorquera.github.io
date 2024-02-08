@@ -13,12 +13,12 @@
   --Red: #ca0b1b;
   --RedDark: #aa0000;
   --NavHeight: calc(60px + 6vh);
-  --corners: 10px;
-  --cornersSmall: 3px;
+  --corners: .5rem;
+  --cornersSmall: .15rem;
   --fontFamily: 'Arvo', sans-serif;
   --font: calc(12px + 1.5vh) var(--fontFamily);
   --Width: 75vw;
-  --border: 3px solid darkgreen;
+  --border: .15rem solid darkgreen;
   font: var(--font);
   background-color: var(--electricMucus);
   color: var(--RedDark);
@@ -116,7 +116,7 @@ a {
 
 form {
   width: 80vw;
-  min-width: 300px;
+  min-width: min(18rem, 80vw);
   margin: 0 auto;
   padding-bottom: 2rem;
   display: flex;
@@ -129,20 +129,20 @@ fieldset {
   margin-bottom: 5vh;
   border: 3px solid var(--EMDark);
   border-radius: var(--corners);
-  min-width: 18rem;
-  max-width: 80vh;
+  min-width: min(18rem, 80vw);
+  max-width: min(80vh, 95vw);
 }
 #deltype {
-  min-width: 8em;
+  min-width: min(8rem, 80vw);
 }
 #sendto {
-  min-width: 18rem;
+  min-width: min(18rem, 80vw);
 }
 #parcelinfo {
-  min-width: 10rem;
+  min-width: min(10rem, 80vw);
 }
 #persinfo {
-  min-width: 18rem;
+  min-width: min(18rem, 80vw);
 }
 
 legend {
@@ -190,7 +190,7 @@ input[type="submit"] {
 .textinput {
   display: block;
   margin: 10px auto;
-  min-width: 17em;
+  min-width: min(17em, 80vw);
   border: 0;
   padding: .2em;
 }
