@@ -17,7 +17,7 @@ function updatePaddingTop() {
 
 function changeFont() {
   var newFont = document.getElementById('lang').value;
-  document.querySelectorAll('html, input, select').forEach(function (element) {
+  document.querySelectorAll('html, input, select, button, #slogan').forEach(function (element) {
     element.style.fontFamily = newFont;
   });
 }

@@ -12,11 +12,11 @@
   --EMDark: #4cb16f;
   --Red: #ca0b1b;
   --RedDark: #aa0000;
-  --NavHeight: calc(60px + 6vh);
+  --NavHeight: min(calc(60px + 6vh), 15vh);
   --corners: .5rem;
   --cornersSmall: .15rem;
   --fontFamily: 'Arvo', sans-serif;
-  --font: calc(12px + 1.5vh) var(--fontFamily);
+  --font: calc(1vw + 2vh) var(--fontFamily);
   --Width: 75vw;
   --border: .15rem solid darkgreen;
   font: var(--font);
@@ -77,13 +77,13 @@ nav {
   top: 0px;
   width: 100%;
   height: auto;
+  max-height: 30vh ;
   padding: .2rem;
   background-color: var(--EMDark);
   border-bottom: var(--border);
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: flex-start;
 }
 
 #header-img {
@@ -96,27 +96,28 @@ a {
   color: var(--Red);
 }
 
+
 .nav-link {
-  font: var(--font);
-  font-weight: bold;
-  margin: .3rem;
-  padding: auto;
-  width: 5rem;
-  height: 3.5rem;
   color: var(--Red);
+  font: bold var(--font);
   background-color: var(--electricMucus);
   border-radius: var(--corners);
   border: var(--border);
+  margin: .3rem;
+  padding: 0;
+  width: 5rem;
+  height: 3.5rem;
+  text-align: center;
+  text-justify: center;
 }
 
 #lang {
-  margin: auto 3rem auto auto;
+  margin: auto 2rem auto auto;
   background-color: var(--electricMucus);
 }
 
 form {
   width: 80vw;
-  min-width: min(18rem, 80vw);
   margin: 0 auto;
   padding-bottom: 2rem;
   display: flex;
@@ -125,24 +126,18 @@ form {
 }
 
 fieldset {
-  padding: 0 2rem 2rem 2rem;
+  padding: 0 2rem 2rem;
   margin-bottom: 5vh;
   border: 3px solid var(--EMDark);
   border-radius: var(--corners);
-  min-width: min(18rem, 80vw);
-  max-width: min(80vh, 95vw);
+  min-width: min(18rem, 80%);
+  max-width: min(80vh, 100%);
 }
 #deltype {
-  min-width: min(8rem, 80vw);
-}
-#sendto {
-  min-width: min(18rem, 80vw);
+  min-width: min(8rem, 80%);
 }
 #parcelinfo {
-  min-width: min(10rem, 80vw);
-}
-#persinfo {
-  min-width: min(18rem, 80vw);
+  min-width: min(10rem, 80%);
 }
 
 legend {
@@ -189,10 +184,10 @@ input[type="submit"] {
 
 .textinput {
   display: block;
-  margin: 10px auto;
-  min-width: min(17em, 80vw);
+  margin: .5rem auto;
+  width: 90%;
   border: 0;
-  padding: .2em;
+  padding: .2rem;
 }
 
 .inline {
@@ -229,6 +224,7 @@ address {
 @media screen and (max-width:46rem) {
   .nav-link {
     min-width: 3.5rem;
+    font-size: 1rem;
     margin: 0.1rem;
   }
 }
