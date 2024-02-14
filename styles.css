@@ -37,10 +37,34 @@ section {
 }
 
 iframe {
-    border:none;
-    width: 100%;
-    height: 40vh;
+    border: none;
+    width: 70%;
+    height: 50vh;
     margin: auto;
+    padding: 6.65vh 9.3%;
+    background-image: url('images/Frame\ 1.png');
+    background-size: 100% 100%;
+}
+
+.background {
+    display: flex;
+    position: relative;
+    margin: auto;
+    width: 80vw;
+    height: 60vh;
+    background: red;
+}
+.background:before {
+    content: 's';
+    position: absolute;
+    margin: auto;
+    font: 63vh 'Ornaments';
+    background: rgba(0, 0, 255, .5);
+    width: 100%;
+    height: 100%;
+    line-height: 100%;
+    transform: scale(calc(80vh / 60vh), 1);
+    z-index:1;
 }
 
 h1 {
