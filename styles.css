@@ -1,14 +1,14 @@
 @font-face {
     font-family: 'Antique';
-    src: url('RomanAntique.ttf') format('truetype');
+    src: url('fonts/RomanAntique.ttf') format('truetype');
 }
 @font-face {
     font-family: 'Ornaments';
-    src: url('MortisedOrnaments.ttf') format('truetype');
+    src: url('fonts/MortisedOrnaments.ttf') format('truetype');
 }
 @font-face {
     font-family: 'CoverFont';
-    src: url('antique_book_cover.otf') format('opentype');
+    src: url('fonts/antique_book_cover.otf') format('opentype');
 }
 
 :root {
