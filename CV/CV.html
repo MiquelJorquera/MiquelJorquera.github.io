@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>CV Miquel Jorquera</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js" 
+        integrity="sha384-NaWTHo/8YCBYJ59830LTz/P4aQZK1sS0SneOgAvhsIl3zBu8r9RevNg5lHCHAuQ/"
+        crossorigin="anonymous">
+    </script>
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <script>
+        function downloadPDF() {
+            let pdf = new jsPDF('portrait', 'pt', 'a4');
+            pdf.html(document.body, {
+                callback: function () {
+                    pdf.save('CV.pdf');
+                }
+            });
+        }
+    </script>
+  </head>
+
+  <body>
+    <button onclick='downloadPDF();'>Download<br></button>
+    <h1>MIQUEL JORQUERA, CV</h1>
+    <h2>Contact Details</h2>
+
+    <table><tr>
+        <td>Address:</td>
+        <td>Celestijnenlaan 27, 0301<br>
+          3001, Heverlee<br>
+          Belgium<br></td>
+      </tr><tr>
+        <td>Phone number:</td>
+        <td>(+34) 621 07 87 02</td>
+      </tr><tr>
+        <td>E-mail</td>
+        <td><a href='mailto:m.jorquera@live.com'>m.jorquera@live.com</a></td>
+      </tr><tr>
+        <td>Date and place of birth:</td>
+        <td>19 Feb 1996, Spain</td>
+      </tr><tr>
+        <td>Nationality:</td>
+        <td>Spanish</td>
+      </tr></table>
+
+    <h2>Education</h2>
+    <table><tr>
+        <td>09/2019-05/2021:</td>
+        <td>Celestijnenlaan 27, 0301<br>
+          3001, Heverlee<br>
+          Belgium<br></td>
+      </tr><tr>
+        <td>Phone number:</td>
+        <td>(+34) 621 07 87 02</td>
+      </tr><tr>
+        <td>E-mail</td>
+        <td><a href='mailto:m.jorquera@live.com'>m.jorquera@live.com</a></td>
+      </tr><tr>
+        <td>Date and place of birth:</td>
+        <td>19 Feb 1996, Spain</td>
+      </tr><tr>
+        <td>Nationality:</td>
+        <td>Spanish</td>
+      </tr></table>
+
+
+    <a href='https://miqueljorquera.github.io'>https://miqueljorquera.github.io</a>
+    <ul>
+      <li>Thing 1</li>
+      <li>Thing 2</li>
+      <li>Thing 3</li>
+    </ul>
+  </body>
+</html>

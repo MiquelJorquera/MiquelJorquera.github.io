@@ -1,0 +1,31 @@
+@font-face {
+    font-family: 'LinuxLibertine';
+    src: url('LinLibertine_R.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'LinuxLibertineB';
+    src: url('LinLibertine_RB.ttf') format('truetype');
+}
+
+body {
+    padding: 8%;
+    font: 16px LinuxLibertine, Arial, sans-serif;
+    --color: black;
+    --bgColor: white;
+    color: var(--color);
+    background-color: var(--bgColor);
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    font: 1.5rem LinuxLibertineB, Arial, sans-serif;
+}
+
+td {
+    vertical-align: top;
+    padding: .5rem;
+}
