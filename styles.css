@@ -1,8 +1,4 @@
 @font-face {
-    font-family: 'Antique';
-    src: url('fonts/RomanAntique.ttf') format('truetype');
-}
-@font-face {
     font-family: 'Ornaments';
     src: url('fonts/MortisedOrnaments.ttf') format('truetype');
 }
@@ -10,9 +6,28 @@
     font-family: 'CoverFont';
     src: url('fonts/antique_book_cover.otf') format('opentype');
 }
+@font-face {
+    font-family: 'EB Garamond';
+    src: url('fonts/EbGaramondSmallcaps08Regular-v4R4.ttf');
+    font-style: small-caps;
+}
+@font-face {
+    font-family: 'EB Garamond';
+    src: url('fonts/EbGaramond08Italic-7W1B.ttf');
+    font-style: italic;
+}
+@font-face {
+    font-family: 'EB Garamond';
+    src: url('fonts/EbGaramond08Regular-2mWe.ttf');
+}
+@font-face {
+    font-family: 'EB Garamond Initials';
+    src: url('fonts/EbGaramondInitials-LeOE.ttf');
+}
 
 :root {
-    font: calc(12px + 1.5vw) Antique;
+    --font:  'EB Garamond', arial;
+    font: calc(12px + 1.5vw) var(--font);
     --color: black;
     --bgColor: hsl(33,100%,88%);
     --dark1: hsl(33,100%,83%);
@@ -76,12 +91,16 @@ h1 {
     font: small-caps 2.5rem CoverFont;
 }
 
+b {
+    font-weight: 600;
+}
+
 h2 {
-    font: small-caps 1.75rem Antique;
+    font: 500 small-caps 1.75rem var(--font);
 }
 
 h3 {
-    font: small-caps 1.3rem Antique;
+    font: 500 small-caps 1.3rem var(--font);
 }
 
 hr {
@@ -171,6 +190,7 @@ td {
 }
 td:first-of-type {
     font-style: italic;
+    font-weight: 600;
 }
 
 #CV ul {
@@ -182,4 +202,12 @@ td:first-of-type {
     text-align: left;
     margin: 1rem 0;
     width: auto
+}
+
+p {
+    text-align: start;
+}
+
+.fancy:first-letter {
+    font: 1.75rem 'EB Garamond Initials';
 }

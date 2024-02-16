@@ -28,6 +28,7 @@ h1 {
 
 h2 {
     font: bold 1.5rem LinuxLibertine, Arial, sans-serif;
+    font-weight: 800;
 }
 
 a {
