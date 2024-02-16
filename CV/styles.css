@@ -8,7 +8,9 @@
     src: url('LinLibertine_aS.ttf') format('truetype');
 }
 
-
+html {
+    width: 100%;
+}
 
 body {
     padding: 8%;
@@ -21,7 +23,7 @@ body {
 
 h1 {
     text-align: center;
-    font: bold 1.75rem LinuxLibertineB, Arial, sans-serif;
+    font: bold 2.25rem LinuxLibertineB, Arial, sans-serif;
 }
 
 h2 {
