@@ -173,6 +173,10 @@ td:first-of-type {
     font-style: italic;
 }
 
+#CV ul {
+    list-style-type: '- ';
+}
+
 #CV li {
     border-bottom: none;
     text-align: left;
