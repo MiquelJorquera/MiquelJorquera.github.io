@@ -5,38 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles.css" />
     <title>CV Miquel Jorquera</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js" 
-        integrity="sha384-NaWTHo/8YCBYJ59830LTz/P4aQZK1sS0SneOgAvhsIl3zBu8r9RevNg5lHCHAuQ/"
-        crossorigin="anonymous">
-    </script>
-    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
-    <script>
-        function downloadPDF() {
-            let pdf = new jsPDF('portrait', 'pt', 'a4');
-            pdf.html(document.body, {
-                callback: function () {
-                    pdf.save('CV.pdf');
-                }
-            });
-        }
-    </script>
+    <script>function savePDF() {}</script>
   </head>
 
-  <body>
-    <button onclick='downloadPDF();'>Download<br></button>
-    <h1>MIQUEL JORQUERA, CV</h1>
+  <body id='CV'>
+    
+    <h1>Miquel Jorquera, CV</h1>
+
+    <button class='print-hidden-button' onclick='window.print();'>Save PDF</button>
+    
     <h2>Contact Details</h2>
 
     <table><tr>
         <td>Address:</td>
         <td>Celestijnenlaan 27, 0301<br>
-          3001, Heverlee<br>
+          3001 Heverlee, Leuven<br>
           Belgium<br></td>
       </tr><tr>
         <td>Phone number:</td>
         <td>(+34) 621 07 87 02</td>
       </tr><tr>
-        <td>E-mail</td>
+        <td>E-mail:</td>
         <td><a href='mailto:m.jorquera@live.com'>m.jorquera@live.com</a></td>
       </tr><tr>
         <td>Date and place of birth:</td>
@@ -48,36 +37,73 @@
 
     <h2>Education</h2>
     <table><tr>
-        <td><b>09/2019-05/2021:</b></td>
+        <td>09/2019-05/2021:</td>
         <td>Enrolled in the <b>PhD program</b> of the Okinawa Institute of Science and Technology (OIST). <b>Unfinished</b>.<br>
-          Lab rotations:<br>
-           Qubits and Spacetime Unit (Philipp Höhn) <br>
-           Quantum Gravity Unit (Yasha Neiman)<br>
-           Gravity, Quantum Geometry and Field Theory Unit (Reiko Toriumi).</td>
+          Lab rotations:<ul>
+           <li>Qubits and Spacetime Unit (Philipp Höhn)</li>
+           <li>Quantum Gravity Unit (Yasha Neiman)</li>
+           <li>Gravity, Quantum Geometry and Field Theory Unit (Reiko Toriumi)</li>
+          </ul></td>
       </tr><tr>
-        <td><b>10/2018-02/2019:</b></td>
+        <td>10/2018-02/2019:</td>
         <td>Enrolled in and completed the <b>Relativity and Geometry</b> course from the Advanced Physics and Applied Mathematics Master's degree by the Universitat de les Illes Balears (UIB).</td>
       </tr><tr>
-        <td><b>09/2014-09/2018:</b></td>
+        <td>09/2014-09/2018:</td>
         <td><b>MPhys Hons Theoretical Physics</b> from Lancaster University (UK).<br>Final average grade: <b>74%</b> (1st class).<br>
-          - Master's thesis project: Designing a singularity-free optical black hole.<br>
-          Supervised by Jonathan Gratus.<br>
-          - Bachelor's final project: Canonical quantization of the electromagnetic field, and a review of photon localizability and photon wavefunctions.<br>
-          - Other projects: Literature review on space(-time) cloaking devices and transformation optics. Numerical simulation of a linear particle accelerator. Numerical simulation of the effects of impurities on the conductance and density of states of graphene nano-ribbons.</td>
+        <ul>
+          <li>Master's thesis project: Designing a singularity-free optical black hole. Supervised by Jonathan Gratus.</li>
+          <li>Bachelor's final project: Canonical quantization of the electromagnetic field, and a review of photon localizability and photon wavefunctions.</li>
+          <li>Other projects: Literature review on space(-time) cloaking devices and transformation optics. Numerical simulation of a linear particle accelerator. Numerical simulation of the effects of impurities on the conductance and density of states of graphene nano-ribbons.</li>
+        </ul></td>
       </tr><tr>
-        <td>Date and place of birth:</td>
-        <td>19 Feb 1996, Spain</td>
-      </tr><tr>
-        <td>Nationality:</td>
-        <td>Spanish</td>
+        <td>09/2012-09/2014:</td>
+        <td>Spanish <b>Bachillerato (Science and Technology)</b> at Colegio Montesión.<br>
+        Average grade: <b>8.37/10</b>.</td>
       </tr></table>
 
+    <h2>Relevant experience</h2>
 
-    <a href='https://miqueljorquera.github.io'>https://miqueljorquera.github.io</a>
-    <ul>
-      <li>Thing 1</li>
-      <li>Thing 2</li>
-      <li>Thing 3</li>
-    </ul>
+      <table><tr>
+        <td>2015-2017:</td>
+        <td>Holiday training by Alicia Sintes and Sascha Husa from the <a href='http://grg.uib.es/'>Relativity and Gravitation Group</a> (GRG) at the Universitat de les Illes Balears (UIB). I learned MATLAB, Python, and data analysis by reproducing the results of several papers on gravitational waves and the LIGO, Virgo and LISA detectors.</td>
+      </tr><tr>
+        <td>09/2015:</td>
+        <td>Served as auxiliary for the <a href='http://grg.uib.es/ERE2015/'>ERE2015</a> (Spanish Relativity Meeting), held at UIB.</td>
+      </tr></table>
+    
+    
+    <h2>Programming</h2>
+
+      <table><tr>
+        <td>Python:</td>
+        <td>4 years experience. Used for my MPhys project, UIB research collaboration, and various other projects.</td>
+      </tr><tr>
+        <td>Javascript, HTML:</td>
+        <td>Self-taught via <a href='https://www.freecodecamp.org/MJorquera'>freecodecamp</a> and earned the relevant certifications. Portfolio at <a href='https://miqueljorquera.github.io'>https://miqueljorquera.github.io</a></td>
+      </tr><tr>
+        <td>MATLAB:</td>
+        <td>1 year experience. Used during my summer training and a group project at university.</td>
+      </tr><tr>
+        <td>Java:</td>
+        <td>Learned during a 10-week course at university, and used for a linear particle accelerator numerical simulation.</td>
+      </tr></table>
+
+    <h2>Languages</h2>
+      
+      <table><tr>
+        <td>English:</td>
+        <td><b>7.5/10 IELTS</b> in 2014, and have been working at English-speaking universities since.<br>
+          Lab rotations:<ul>
+           <li>Qubits and Spacetime Unit (Philipp Höhn)</li>
+           <li>Quantum Gravity Unit (Yasha Neiman)</li>
+           <li>Gravity, Quantum Geometry and Field Theory Unit (Reiko Toriumi)</li>
+          </ul></td>
+      </tr><tr>
+        <td>Spansih:</td>
+        <td>Native.</td>
+      </tr><tr>
+        <td>Catalan:</td>
+        <td>Native.</td>
+      </tr></table>
   </body>
 </html>

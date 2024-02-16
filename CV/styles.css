@@ -5,8 +5,10 @@
 
 @font-face {
     font-family: 'LinuxLibertineB';
-    src: url('LinLibertine_RB.ttf') format('truetype');
+    src: url('LinLibertine_aS.ttf') format('truetype');
 }
+
+
 
 body {
     padding: 8%;
@@ -19,13 +21,38 @@ body {
 
 h1 {
     text-align: center;
+    font: bold 1.75rem LinuxLibertineB, Arial, sans-serif;
 }
 
 h2 {
-    font: 1.5rem LinuxLibertineB, Arial, sans-serif;
+    font: bold 1.5rem LinuxLibertine, Arial, sans-serif;
+}
+
+a {
+    color: darkred
 }
 
 td {
     vertical-align: top;
     padding: .5rem;
+}
+
+ul {
+    list-style-type: '- ';
+    margin: 0;
+    padding: 0 1rem;
+}
+
+td:first-of-type {
+    font-weight: bold;
+}
+
+.print-hidden-button {
+    float: right;
+}
+
+@media print {
+    .print-hidden-button {
+      display: none;
+  }
 }

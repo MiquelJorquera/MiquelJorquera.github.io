@@ -36,7 +36,7 @@ section {
     border: 1px solid var(--color);
 }
 
-iframe {
+.frame1 {
     border: none;
     width: min(70%, calc(50vh * 4/3));
     height: 50vh;
@@ -44,6 +44,12 @@ iframe {
     padding: 6.65vh min(9.35%, 8.9vh);
     background-image: url('images/Frame\ 1.png');
     background-size: 100% 100%;
+}
+
+.CV {
+    width: 90vw;
+    padding:0;
+    margin:0;
 }
 
 .background {
