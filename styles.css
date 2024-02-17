@@ -64,9 +64,9 @@ section {
 
 button {
     background-color: var(--dark1);
-    margin: 2rem 0 0 50%;
-    width: 6rem;
-    font: small-caps 1rem var(--font);
+    margin: 1rem 0 0 70%;
+    width: 4rem;
+    font: small-caps .75rem var(--font);
 }
 
 .background {
