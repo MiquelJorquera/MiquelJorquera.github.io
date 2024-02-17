@@ -27,7 +27,7 @@
 
 :root {
     --font:  'EB Garamond', arial;
-    font: calc(12px + 1.5vw) var(--font);
+    font: calc(8px + 3vw) var(--font);
     --color: black;
     --bgColor: hsl(33,100%,88%);
     --dark1: hsl(33,100%,83%);
@@ -122,7 +122,7 @@ li {
 
 a {
     color: var(--color);
-    line-height: 1em;
+    line-height: 1rem;
     font-weight: normal;
 }
 
@@ -132,13 +132,18 @@ a {
 
 .cover {
     margin-bottom: -1rem;
+    display: flex;
+    flex-flow: center;
+    align-items: baseline;
+    justify-content: center;
+    font-size: min(2.5rem, 180%);
 }
 .cover:before {
-    font: 4rem Ornaments;
+    font: min(4rem, 150%) Ornaments;
     content: "H";
 }
 .cover:after {
-    font: 4rem Ornaments;
+    font: min(4rem, 150%) Ornaments;
     content: "E";
 }
 
