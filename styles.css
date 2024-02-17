@@ -27,7 +27,7 @@
 
 :root {
     --font:  'EB Garamond', arial;
-    font: calc(8px + 3vw) var(--font);
+    font: calc(10px + 1.75vw) var(--font);
     --color: black;
     --bgColor: hsl(33,100%,88%);
     --dark1: hsl(33,100%,83%);
@@ -64,7 +64,9 @@ section {
 
 button {
     background-color: var(--dark1);
-    float: right;
+    margin: 2rem 0 0 50%;
+    width: 6rem;
+    font: small-caps 1rem var(--font);
 }
 
 .background {
@@ -199,8 +201,13 @@ td:first-of-type {
     font-weight: 600;
 }
 
+#CV {
+    min-width: 20rem;
+}
+
 #CV ul {
     list-style-type: '- ';
+    padding: 0 1rem;
 }
 
 #CV li {

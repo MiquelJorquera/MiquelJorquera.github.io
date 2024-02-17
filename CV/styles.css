@@ -51,7 +51,8 @@ td:first-of-type {
 }
 
 .print-hidden-button {
-    float: right;
+    margin-left: 80%;
+    margin-right: 0;
 }
 
 @media print {
